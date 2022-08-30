@@ -37,11 +37,21 @@ app.set('views', __dirname+"/pages");
 const PORT = process.env.PORT || 3000;
 const server = http.createServer(app);
 
+// TODO: Prevent Cross-site Scripting
+const escapeHTML = str => str.replace(/[&<>'"]/g, 
+  tag => ({
+      '&': '&amp;',
+      '<': '&lt;',
+      '>': '&gt;',
+      "'": '&#39;',
+      '"': '&quot;'
+    }[tag]));
+
 app.get('/',(req,res)=>{
     if(req.user)
         res.render("homepage",{
             layout: false,
-            name: req.user.name
+            name: escapeHTML(req.user.name)
         });
     else res.render("login",{
         layout: false,
