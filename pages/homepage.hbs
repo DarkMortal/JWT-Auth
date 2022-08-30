@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="/styles.css"/>
+    <style>
+        footer {
+            position: relative;
+            left: 0;
+            height: fit-content;
+            bottom: 0;
+            width: 100%;
+            background-color: #012148;
+            color: white;
+            text-align: left;
+            overflow: hidden;
+        }
+        #logout{
+            position: relative;
+            z-index: 100;
+            float: right;
+            margin-top: 10px;
+            margin-right: 15px;
+        }
+    </style>
+    <script src="https://kit.fontawesome.com/0b6d8e7b56.js" crossorigin="anonymous"></script>
+</head>
+<body class="bg-gray-900">
+    <a href="/logout" id="logout">
+      <button class="h-12 px-6 m-2 text-lg text-indigo-100 transition-colors duration-150 bg-indigo-700 rounded-lg focus:shadow-outline hover:bg-indigo-800">Logout</button>
+    </a>
+    <section class="text-gray-400 body-font bg-gray-900">
+        <div class="container px-5 py-24 mx-auto">
+          <div class="flex flex-wrap w-full mb-20">
+            <div class="lg:w-1/2 w-full mb-6 lg:mb-0">
+              <h1 class="sm:text-3xl text-2xl font-medium title-font mb-2 text-white">Welcome {{{name}}}</h1>
+              <div class="h-1 w-20 bg-indigo-500 rounded"></div>
+            </div>
+            <p class="lg:w-1/2 w-full leading-relaxed text-gray-400 text-opacity-90">MyAnimeList, often abbreviated as MAL, is an anime and manga social networking and social cataloging application website run by volunteers.</p>
+          </div>
+          <div class="flex flex-wrap -m-4">
+            <div class="xl:w-1/4 md:w-1/2 p-4">
+              <div class="bg-gray-800 bg-opacity-40 p-6 rounded-lg">
+                <img class="h-40 rounded w-full object-cover object-center mb-6" src="https://cdn.myanimelist.net/images/anime/1607/117271.jpg" alt="content">
+                <h3 class="tracking-widest text-indigo-400 text-xs font-medium title-font"><a href="https://myanimelist.net/anime/813/Dragon_Ball_Z" target="_blank">MAL RATING</a></h3>
+                <h2 class="text-lg text-white font-medium title-font mb-4">Dragon Ball Z</h2>
+                <p class="leading-relaxed text-base" style="text-align: justify;">Five years after winning the World Martial Arts tournament, Goku is now living a peaceful life with his wife and son. 
+                    This changes, however, with the arrival of a mysterious enemy named Raditz who presents himself as Goku's long-lost brother. 
+                    He reveals that Goku is a warrior from the once powerful but now virtually extinct Saiyan race.</p>
+              </div>
+            </div>
+            <div class="xl:w-1/4 md:w-1/2 p-4">
+              <div class="bg-gray-800 bg-opacity-40 p-6 rounded-lg">
+                <img class="h-40 rounded w-full object-cover object-center mb-6" src="https://cdn.myanimelist.net/images/anime/10/47347.jpg" alt="content">
+                <h3 class="tracking-widest text-indigo-400 text-xs font-medium title-font"><a href="https://myanimelist.net/anime/16498/Shingeki_no_Kyojin" target="_blank">MAL RATING</a></h3>
+                <h2 class="text-lg text-white font-medium title-font mb-4">Attack on Titan</h2>
+                <p class="leading-relaxed text-base" style="text-align: justify;">Centuries ago, mankind was slaughtered to near extinction by monstrous humanoid creatures called Titans, forcing humans to hide in fear behind enormous concentric walls. 
+                    What makes these giants truly terrifying is that their taste for human flesh is not born out of hunger but what appears to be out of pleasure.</p>
+              </div>
+            </div>
+            <div class="xl:w-1/4 md:w-1/2 p-4">
+              <div class="bg-gray-800 bg-opacity-40 p-6 rounded-lg">
+                <img class="h-40 rounded w-full object-cover object-center mb-6" src="https://cdn.myanimelist.net/images/anime/10/78745.jpg" alt="content">
+                <h3 class="tracking-widest text-indigo-400 text-xs font-medium title-font"><a href="https://myanimelist.net/anime/31964/Boku_no_Hero_Academia" target="_blank">MAL RATING</a></h3>
+                <h2 class="text-lg text-white font-medium title-font mb-4">My Hero Academia</h2>
+                <p class="leading-relaxed text-base">The appearance of "quirks," newly discovered super powers, has been steadily increasing over the years, with 80 percent of humanity possessing various abilities from manipulation of elements to shapeshifting. 
+                    This leaves the remainder of the world completely powerless, and Izuku Midoriya is one such individual.</p>
+              </div>
+            </div>
+            <div class="xl:w-1/4 md:w-1/2 p-4">
+              <div class="bg-gray-800 bg-opacity-40 p-6 rounded-lg">
+                <img class="h-40 rounded w-full object-cover object-center mb-6" src="https://cdn.myanimelist.net/images/anime/1565/111305.jpg" alt="content">
+                <h3 class="tracking-widest text-indigo-400 text-xs font-medium title-font"><a href="https://myanimelist.net/anime/1735/Naruto__Shippuuden" target="_blank">MAL RATING</a></h3>
+                <h2 class="text-lg text-white font-medium title-font mb-4">Naruto Shippuden</h2>
+                <p class="leading-relaxed text-base">It has been two and a half years since Naruto Uzumaki left Konohagakure, the Hidden Leaf Village, for intense training following events which fueled his desire to be stronger. Now Akatsuki, the mysterious organization of elite rogue ninja, is closing in on their grand plan which may threaten the safety of the entire shinobi world.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <footer class="text-center text-lg-start text-white" style="background-color: #1c2331">
+        <section class="d-flex justify-content-between p-4" style="background-color: #6351ce; height: 11vh;">
+        <div class="me-5" style="width: 100%;">
+            <span style="float: left;">Get connected with me on social networks:</span>
+            <div style="float: right;">
+                <a href="mailto: saptarshidey.bdm@google.com" class="text-white me-4" style="margin-right: 10px;">
+                <i class="fab fa-google"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/saptarshi-dey-0905211a5/" target="_blank" class="text-white me-4" style="margin-right: 10px;">
+                <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://github.com/DarkMortal" target="_blank" class="text-white me-4" style="margin-right: 10px;">
+                <i class="fab fa-github"></i>
+                </a>
+            </div>
+        </div>
+        </section>
+        <section>
+            <div class="row mt-3" style="padding-left: 10px; padding-right: 10px">
+            <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4" style="width: 90%; text-align: left">
+                <h5 class="text-uppercase fw-bold"><b>About Me</b></h5>
+                <hr class="mb-9 mt-0 d-inline-block mx-auto" style="width: 60px; background-color: #7c4dff; height: 2px"/>
+                <p>
+                    My name is Saptarshi Dey and I am currently enrolled for B. Tech in Guru Nanak Institute of Technology
+                </p>
+            </div>
+            </div>
+        </section>
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+            Saptarshi Dey © 2022
+        </div>
+    </footer>
+</body>
+</html>

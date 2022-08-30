@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup Page</title>
+    <link rel="stylesheet" href="/styles.css"/>
+</head>
+<body style="background-image: url('/resources/FooterIMG.jpg'); background-repeat: no-repeat;">
+    {{#if message.type}}
+        <script src="/resources/Alert.js"></script>
+        {{#if (isError message.type)}}
+            <script>
+                swal({
+                    title: "Error Message Dialog",
+                    text: "{{{message.message}}}",
+                    icon: "error",
+                    button: "CLOSE"
+                });
+            </script>
+        {{else if (isWarning message.type)}}
+            <script>
+                swal({
+                    title: "Warning Message Dialog",
+                    text: "{{{message.message}}}",
+                    icon: "warning",
+                    button: "CLOSE"
+                });
+            </script>
+        {{else if (isOk message.type)}}
+            <script>
+                swal({
+                    title: "Success Message Dialog",
+                    text: "{{{message.message}}}",
+                    icon: "success",
+                    button: "CLOSE"
+                });
+            </script>
+        {{/if}}
+    {{/if}}
+    <section class="text-gray-400 body-font">
+        <div class="container px-5 py-24 mx-auto flex flex-wrap items-center">
+            <div class="lg:w-3/5 md:w-1/2 md:pr-16 lg:pr-0 pr-0" style="background-color: rgba(0, 0, 0, 0.521); padding: 20px; border-radius: 10px;">
+                <h1 class="title-font font-medium text-3xl text-white">Welcome to the Signup Page</h1>
+                <p class="leading-relaxed mt-4">You can easily create an account here. Just fill in the required details</p>
+            </div>
+          <div class="lg:w-2/6 md:w-1/2 bg-gray-800 rounded-lg p-8 flex flex-col md:ml-auto w-full mt-10 md:mt-0" style="float: right;">
+            <form action="/signup" method="post">
+                <h2 class="text-white text-lg font-medium title-font mb-5"><u>Sign Up for an Account</u></h2>
+                <input class="bg-gray-900 rounded border text-white border-gray-900 focus:outline-none focus:border-indigo-500 text-base px-4 py-2 mb-4" style="width: 100%;" placeholder="Name" type="text" name="name" required>
+                <div style="display: inline-block;"><b>Gender</b>
+                    <select name="sex" class="bg-gray-900 rounded border text-white border-gray-900 focus:outline-none focus:border-indigo-500 text-base px-4 py-2 mb-4" style="width: 100%;">
+                        <option value="Male" selected>Male</option>
+                        <option value="Female">Female</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+                <input class="bg-gray-900 rounded border text-white border-gray-900 focus:outline-none focus:border-indigo-500 text-base px-4 py-2 mb-4" style="width: 100%;" placeholder="Age" type="number" min="18" max="100" name="age" required>
+                <input class="bg-gray-900 rounded border text-white border-gray-900 focus:outline-none focus:border-indigo-500 text-base px-4 py-2 mb-4" style="width: 100%;" placeholder="Password" type="password" name="password" required>
+                <input type="submit" class="text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg" style="width: 100%;" value="Sign Up">
+            </form>
+        </div>
+      </section>
+</body>
+</html>
